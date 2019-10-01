@@ -10,8 +10,13 @@
  			$penerbit,
  			$harga = 0;
 
- 	public function sayHello()  {
- 		return "hello world";
+ 	// public function sayHello()  {
+ 	// 	return "hello world";
+ 	// }
+
+
+ 	public function getLabel(){
+ 		return "$this -> penulis, $this -> penerbit";
  	}
 
  }
@@ -28,8 +33,16 @@
  $produk3->penerbit = "Shonen Jump";
  $produk3->harga = "30000";
 
- echo "Komik :  $produk3->penulis, $produk3->penerbit";
+ $produk4 = new Produk();
+ $produk4->judul = "Uncharted";
+ $produk4->penulis = "Neil Druckman ";
+ $produk4->penerbit = "Sony Computer";
+ $produk4->harga = "250000";
+
  echo "<br>";
- echo $produk3->sayHello();
+ echo "Komik: " . $produk3->getLabel();
+
+ echo "<br>";
+ echo "Game : " . $produk4->getLabel();
 
  
