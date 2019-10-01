@@ -22,7 +22,9 @@
  		return "$this->penulis, $this->penerbit";
  	}
 
- } Class CetakInfoProduk{
+ } 
+
+ class CetakInfoProduk{
  	public function cetak($produk){
  		$str = "{$produk->judul} | {$produk->getLabel()} (Rp. {$produk->harga})";
  		return $str;
@@ -46,5 +48,5 @@
 
 
  $infoProduk1 = new CetakInfoProduk();
- $infoProduk1->cetak($produk1);
+ echo $infoProduk1->cetak($produk1);
  
