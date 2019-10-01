@@ -8,8 +8,12 @@
  	public  $judul,
  			$penulis,
  			$penerbit,
- 			$harga;
+ 			$harga = 0;
 
  }
 
  $produk1 = new Produk();
+ $produk1->judul="Naruto";
+
+ $produk2 = new Produk();
+ $produk2->judul = "Uncharted";
