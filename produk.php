@@ -5,14 +5,14 @@
 // game
  
  class Produk{
- 	public  $judul,
- 			$penulis,
- 			$penerbit,
+ 	public  $judul = "judul",
+ 			$penulis = "penulis",
+ 			$penerbi = "penerbit",
  			$harga = 0;
 
- 	// public function sayHello()  {
- 	// 	return "hello world";
- 	// }
+ 	public function __construct(){
+ 		echo "Hello World";
+ 	}
 
 
  	public function getLabel(){
@@ -21,11 +21,6 @@
 
  }
 
- // $produk1 = new Produk();
- // $produk1->judul="Naruto";
-
- // $produk2 = new Produk();
- // $produk2->judul = "Uncharted";
 
  $produk3 = new Produk();
  $produk3->judul = "Naruto";
