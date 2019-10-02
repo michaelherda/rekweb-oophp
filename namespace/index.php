@@ -10,4 +10,7 @@ $produk1 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100);
  // $cetakProduk->tambahProduk($produk2);
  // echo $cetakProduk->cetak();
 
- new App\Produk\User();
+ new App\Produk\User;
+ new User();
+ echo "<br>";
+ new App\Service\User(); 
