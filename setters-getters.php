@@ -7,12 +7,11 @@
  class Produk{
  	private  $judul = "judul",
  			$penulis = "penulis",
- 			$penerbit = "penerbit";
- 	protected
+ 			$penerbit = "penerbit",
+ 			$harga = 0, 
  			$diskon = 0;
  			
- 	private
- 			$harga = 0;
+ 			
  			
 
  	public function __construct($judul, $penulis, $penerbit, $harga){
@@ -23,6 +22,7 @@
  	}
 
  	public function setJudul($judul){
+
  		$this->judul=$judul;
  	} 
 
@@ -30,8 +30,32 @@
  		return $this->judul;
  	}
 
+ 	public function setPenulis($penulis){
+ 		$this->penulis = $penulis;
+ 	}
+
+ 	public function getPenulis(){
+ 		return $this->penulis;
+ 	}
+
+ 	public function setPenerbit($penerbit){
+ 		$this->penerbit=$penerbit;
+ 	}
+
+ 	public function getPenerbit(){
+ 		return $this->penerbit;
+ 	}
+
  	public function setDiskon($diskon){
  		$this->diskon = $diskon;
+ 	}
+
+ 	public function getDiskon(){
+ 		return $this->diskon ;
+ 	}
+
+ 	public function setHarga($harga){
+ 		$this->harga=$harga;
  	}
 
  	public function getHarga(){
