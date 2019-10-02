@@ -1,4 +1,4 @@
-<?php namespace App\Service;a
+<?php namespace App\Service;
 
 
 class User{
@@ -7,5 +7,3 @@ class User{
 
 	}
 }
-
- ?>
