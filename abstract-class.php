@@ -69,12 +69,10 @@
 
  	abstract public function getInfoProduk();
  		
- 	publict function getInfo(){
+ 	public function getInfo(){
  		$str = "{$this->judul}|{$this->getLabel()}(Rp. {$this->harga})";
  	
  		return $str;
- 	}
-
  	}
 
  } 
@@ -92,7 +90,7 @@
 
 
  	public function getInfoProduk (){
- 		$str = "Game : ". parent::getInfoProduk() . "- {$this->jmlHalaman}";
+ 		$str = "Game : ". $this->getInfo() . "- {$this->jmlHalaman}";
  		return $str;
 
  	}
@@ -113,7 +111,7 @@
 
  	function getInfoProduk()
  	{
- 		$str = "Game : ". parent::getInfoProduk(). " ~ {$this->waktuMain} Jam.";
+ 		$str = "Game : ". $this->getInfo(). " ~ {$this->waktuMain} Jam.";
  		return $str;
  	}
  }
