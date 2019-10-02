@@ -7,10 +7,11 @@
  class Produk{
  	public  $judul = "judul",
  			$penulis = "penulis",
- 			$penerbit = "penerbit";
+ 			$penerbit = "penerbit",
+ 			$diskon;
  			
- 	protected
- 	$harga = 0;
+ 	private
+ 			$harga = 0;
  			
 
  	public function __construct($judul, $penulis, $penerbit, $harga){
@@ -19,6 +20,14 @@
  		$this->penerbit = $penerbit;
  		$this->harga = $harga;
  	}
+
+ 	public function setDiskon($diskon){
+ 		$this->diskon = $diskon;
+ 	}
+
+ 	public function getHarga(){
+ 		return $this->harga - ($this->harga * $this->diskon / 100);
+ 	}	
 
 
  	public function getLabel(){
@@ -63,11 +72,7 @@
 
 			$this->waktuMain = $waktuMain;
 
-		}
-
- 	public function getHarga(){
- 		return $this->harga;
- 	}	  	
+		}  	
 
  	function getInfoProduk()
  	{
@@ -97,7 +102,7 @@
  echo "<hr>";
 
  
-
+$produk2->setDiskon(50);
  echo $produk2->getHarga();
 
  
