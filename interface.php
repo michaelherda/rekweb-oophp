@@ -4,7 +4,7 @@
 // komik
 // game
 
-interface getInfoProduk{
+interface InfoProduk{
 	public function getInfoProduk();
 }
  
@@ -81,7 +81,7 @@ interface getInfoProduk{
 
  } 
 
- class Komik extends produk{
+ class Komik extends produk implements InfoProduk{
  	public $jmlHalaman;
 
  	public function __construct($judul, $penulis, $penerbit, $harga, $jmlHalaman=0){
@@ -101,7 +101,7 @@ interface getInfoProduk{
 
  }
 
- class Game extends Produk
+ class Game extends Produk implements InfoProduk
  {
  	public $waktuMain;
 
