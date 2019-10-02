@@ -41,6 +41,12 @@
 
  } 
 
+ class Komik extends produk{
+
+
+ }
+
+
  class CetakInfoProduk{
  	public function cetak(Produk $produk){
  		$str = "{$produk->judul} | {$produk->getLabel()} (Rp. {$produk->harga})";
@@ -52,7 +58,7 @@
 
 
 
- $produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100, 0, "Komik");
+ $produk1 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100, 0, "Komik");
  $produk2 = new Produk("Uncharted", "Neil Druckman", "Sony Computer", 250000, 0, 50, "Game");
 
  echo $produk1->getInfoLengkap();
