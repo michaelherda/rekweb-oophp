@@ -141,8 +141,11 @@ $produk2->setDiskon(70);
  echo "<hr>";
 
 $produk1->setJudul("judulbaru");
+echo $produk1->getJudul();
 
- echo $produk1->getJudul();
+$produk1->setPenulis("Michael");
+echo $produk1->getpenulis();
+
 
  
  
