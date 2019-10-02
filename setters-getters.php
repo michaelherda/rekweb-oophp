@@ -22,6 +22,14 @@
  		$this->harga = $harga;
  	}
 
+ 	public function setJudul($judul){
+ 		$this->judul=$judul;
+ 	} 
+
+ 	public function getJudul(){
+ 		return $this->judul;
+ 	}
+
  	public function setDiskon($diskon){
  		$this->diskon = $diskon;
  	}
@@ -104,8 +112,13 @@
 
  
 $produk2->setDiskon(70);
-$produk1->setDiskon();
- echo $produk2->getHarga();
+ echo $produk2->getHarga("Barang Baru");
+
+ echo "<hr>";
+
+$produk1->setJudul("judulbaru");
+
+ echo $produk1->getJudul();
 
  
  
