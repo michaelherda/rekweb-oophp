@@ -11,13 +11,21 @@
 /**
  * 
  */
+// class Coba
+// {
+// 	const NAMA = 'Michael';
+// }
+ 
+// echo Coba::NAMA;
+
+/**
+ * 
+ */
 class Coba
 {
-	const NAMA = 'Michael';
-	function __construct(argument)
-	{
-		# code...
-	}
+	
+	public $kelas = __CLASS__;
 }
 
-echo Coba::NAMA;
+$obj = new Coba;
+echo $obj->kelas;
