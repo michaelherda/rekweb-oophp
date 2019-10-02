@@ -13,7 +13,7 @@
  			$waktuMain;
  			
 
- 	public function __construct($judul, $penulis, $penerbit, $harga, $jmlHalaman=0, $waktuMain=0){
+ 	public function __construct($judul, $penulis, $penerbit, $harga, $waktuMain=0){
  		$this->judul = $judul;
  		$this->penulis = $penulis;
  		$this->penerbit = $penerbit;
@@ -36,8 +36,9 @@
  } 
 
  class Komik extends produk{
+ 	public jmlHalaman;
  	public function getInfoProduk (){
- 		$str = "Game : "parent::getInfoProduk() . "- {$this->jmlHalaman}";
+ 		$str = "Game : ". parent::getInfoProduk() . "- {$this->jmlHalaman}";
  		return $str;
 
  	}
@@ -49,7 +50,7 @@
  	
  	function getInfoProduk()
  	{
- 		$str = "Game : "parent::getInfoProduk(). " ~ {$this->waktuMain} Jam.";
+ 		$str = "Game : ". parent::getInfoProduk(). " ~ {$this->waktuMain} Jam.";
  		return $str;
  	}
  }
