@@ -37,7 +37,7 @@
 
  class Komik extends produk{
  	public function getInfoProduk (){
- 		$str = "Game : parent::getInfoProduk() - {$this->jmlHalaman}";
+ 		$str = "Game : "parent::getInfoProduk() . "- {$this->jmlHalaman}";
  		return $str;
 
  	}
@@ -49,7 +49,7 @@
  	
  	function getInfoProduk()
  	{
- 		$str = "Game : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) ~ {$this->waktuMain} Jam.";
+ 		$str = "Game : "parent::getInfoProduk(). " ~ {$this->waktuMain} Jam.";
  		return $str;
  	}
  }
